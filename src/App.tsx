@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { UrlShortener } from './components/UrlShortener';
 import { UrlList } from './components/UrlList';
 import { Stats } from './components/Stats';
-import { ApiDemo } from './components/ApiDemo';
 import { urlService } from './services/urlService';
 import { ShortenedUrl, UrlStats } from './types';
 
@@ -36,9 +35,9 @@ function App() {
         <UrlShortener onUrlShortened={handleUrlShortened} />
         <Stats stats={stats} />
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="gap-8">
           <UrlList urls={urls} onDelete={handleDelete} />
-          <ApiDemo />
+          
         </div>
 
         <footer className="mt-12 text-center text-gray-600">
